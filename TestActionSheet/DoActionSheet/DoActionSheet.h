@@ -77,20 +77,20 @@
 
 #define DO_CANCEL_TAG           -100
 
-typedef NS_ENUM(int, DoAlertViewTransitionStyle) {
+typedef NS_ENUM(NSInteger, DoAlertViewTransitionStyle) {
     DoTransitionStyleNormal = 0,
     DoTransitionStyleFade,
-    DoTransitionStylePop,
+    DoTransitionStylePop
 };
 
-typedef NS_ENUM(int, DoAlertViewContentType) {
+typedef NS_ENUM(NSInteger, DoAlertViewContentType) {
     DoContentNone = 0,
     DoContentImage,
-    DoContentMap,
+    DoContentMap
 };
 
 @class DoActionSheet;
-typedef void(^DoActionSheetHandler)(int nResult);
+typedef void(^DoActionSheetHandler)(NSInteger nResult);
 
 @interface DoActionSheet : UIView <MKMapViewDelegate>
 {
@@ -106,15 +106,15 @@ typedef void(^DoActionSheetHandler)(int nResult);
     CGRect                  _rectActionSheet;
 }
 
-@property (readwrite)   int         nAnimationType;
-@property (readwrite)   int         nContentMode;
-@property (readwrite)   int         nDestructiveIndex;
+@property (readwrite)   DoAlertViewTransitionStyle nAnimationType;
+@property (readwrite)   DoAlertViewContentType     nContentMode;
+@property (readwrite)   NSInteger                  nDestructiveIndex;
 
-@property (readwrite)   double      dRound;
-@property (readwrite)   double      dButtonRound;
+@property (readwrite)   CGFloat      dRound;
+@property (readwrite)   CGFloat      dButtonRound;
 
 @property (readwrite)   BOOL        bDestructive;
-@property (readonly)    int         nTag;
+@property (readonly)    NSInteger   nTag;
 
 @property (strong, nonatomic)   NSArray         *aButtons;
 
@@ -143,6 +143,5 @@ typedef void(^DoActionSheetHandler)(int nResult);
 // with only buttons, without title
 - (void)show:(NSArray *)aButtons
       result:(DoActionSheetHandler)result;
-
 
 @end

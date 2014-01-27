@@ -56,9 +56,9 @@
             [vActionSheet showC:@"What do you want for this photo?"
                          cancel:@"Cancel"
                         buttons:@[@"Post to facebook", @"Post to Instagram", @"Delete this photo"]
-                         result:^(int nResult) {
+                         result:^(NSInteger nResult) {
                              
-                             NSLog(@"---------------> result : %d", nResult);
+                             NSLog(@"---------------> result : %ld", (long)nResult);
                              
                          }];
             break;
@@ -67,9 +67,9 @@
             [vActionSheet showC:@"What do you want for this photo?"
                          cancel:@"Cancel"
                         buttons:@[@"Post to facebook", @"Post to twitter", @"Post to Instagram", @"Send a mail", @"Save to camera roll"]
-                         result:^(int nResult) {
+                         result:^(NSInteger nResult) {
                              
-                             NSLog(@"---------------> result : %d", nResult);
+                             NSLog(@"---------------> result : %ld", (long)nResult);
                              
                          }];
             break;
@@ -77,9 +77,9 @@
         case 2:
             [vActionSheet showC:@"Cancel"
                         buttons:@[@"Open with Safari", @"Copy the link"]
-                         result:^(int nResult) {
+                         result:^(NSInteger nResult) {
                              
-                             NSLog(@"---------------> result : %d", nResult);
+                             NSLog(@"---------------> result : %ld", (long)nResult);
                              
                          }];
             break;
@@ -87,18 +87,18 @@
         case 3:
             [vActionSheet show:@"What do you want?"
                         buttons:@[@"Open with Safari", @"Copy the link"]
-                        result:^(int nResult) {
+                        result:^(NSInteger nResult) {
                             
-                            NSLog(@"---------------> result : %d", nResult);
+                            NSLog(@"---------------> result : %ld", (long)nResult);
                             
                         }];
             break;
 
         case 4:
             [vActionSheet show:@[@"Open with Safari", @"Copy the link"]
-                         result:^(int nResult) {
+                         result:^(NSInteger nResult) {
                              
-                             NSLog(@"---------------> result : %d", nResult);
+                             NSLog(@"---------------> result : %ld", (NSInteger)nResult);
                              
                          }];
             break;

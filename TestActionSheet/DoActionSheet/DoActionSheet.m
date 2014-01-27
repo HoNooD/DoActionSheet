@@ -192,7 +192,7 @@
         dYContent += DO_BUTTON_INSET.bottom + DO_BUTTON_INSET.top;
 
     // add buttons
-    int nTagIndex = 0;
+    NSInteger nTagIndex = 0;
     for (NSString *str in _aButtons)
     {
         UIButton *bt = [UIButton buttonWithType:UIButtonTypeCustom];
